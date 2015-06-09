@@ -20,7 +20,7 @@ class CitiesController < ApplicationController
   def show
     @city = City.find(params[:id])
   end
-
+  
   private
     def city_params
       params[:city].permit(:name)

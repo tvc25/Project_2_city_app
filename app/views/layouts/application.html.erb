@@ -5,8 +5,20 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script>
+    var EVENTBRITE_KEY = "<%= ENV['EVENTBRITE_KEY'] %>"
+  </script>
 </head>
 <body class="<%= params[:action]%>">
+
+      <input type="search" id="search-keyword">
+    <select id="search-type">
+      <option value="city">Search by city</option>
+      <option value="venue">Search by venue</option>
+      <option value="event">Search by event</option>
+    </select>
+    <input type="submit" value="Submit">
+    <button class="searchButton">Search</button>
 
 <%= yield %>
 

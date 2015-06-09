@@ -1,4 +1,6 @@
-<%= link_to 'Search your City', new_city_path %>
+<%= link_to 'Add your City', new_city_path %>
   <ul><% @cities.each do|city| %></ul>
     <li><%= link_to city.name, city_path(city) %></li>
+      <ul id="results"></ul>
+
       <% end %>
