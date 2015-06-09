@@ -14,6 +14,7 @@ gem 'elasticsearch'
 gem 'simple_form'
 gem 'thin'
 gem 'bootstrap'
+gem 'haml'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
