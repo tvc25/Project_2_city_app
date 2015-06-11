@@ -16,6 +16,8 @@ gem 'thin'
 gem 'bootstrap'
 gem 'haml'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'geocode'
+gem 'forecast_io'
 
 group :development, :test do
   gem 'byebug'

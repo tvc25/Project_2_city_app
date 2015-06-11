@@ -2,25 +2,34 @@
 <html>
 <head>
   <title>CityApp</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
   <script>
     var EVENTBRITE_KEY = "<%= ENV['EVENTBRITE_KEY'] %>"
+    var EVENTFUL_KEY = "<%= ENV['EVENTFUL_KEY'] %>"
   </script>
 </head>
-<body class="<%= params[:action]%>">
 
+<body>
+<div class="container">
+<nav>
+  <li><%=link_to('Cities', cities_path)%></li>
+  <li><%=link_to('Trips', trips_path)%></li>
+  <li><%= link_to('Add a City', new_city_path)%></li>
+  <li><%= link_to('Add a Trip', new_trip_path)%></li>
+  <li><div class="search">
       <input type="search" id="search-keyword">
-    <select id="search-type">
-      <option value="city">Search by city</option>
-      <option value="venue">Search by venue</option>
-      <option value="event">Search by event</option>
-    </select>
-    <input type="submit" value="Submit">
-    <button class="searchButton">Search</button>
+    <button id="searchButton">Search</button>
+</div></li>
+</nav>
+<h1>TRIP GUIDE</h1>
+
+
+
 
 <%= yield %>
-
+</div>
 </body>
 </html>

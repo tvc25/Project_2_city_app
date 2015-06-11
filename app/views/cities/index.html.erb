@@ -1,6 +1,9 @@
-<%= link_to 'Add your City', new_city_path %>
-  <ul><% @cities.each do|city| %></ul>
-    <li><%= link_to city.name, city_path(city) %></li>
-      <ul id="results"></ul>
 
-      <% end %>
+  
+  <% @cities.each do |city|%>
+   <li><%= link_to city.name, city_path(city), class: "city-name" %> </li>
+
+    
+  </ul>
+
+<%end%>

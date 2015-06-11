@@ -1,0 +1,43 @@
+.container {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  background-color: white;
+}
+li{
+  list-style-type:none;      
+  } 
+
+a{ text-decoration: none;
+  }
+
+a:active { display: inline-block;
+          text-decoration:none;
+          }
+
+nav { li{
+          display: inline-block;
+          text-decoration:none;
+          padding:1%;
+        }
+}
+
+.city-event {
+  width: 48%;
+  display: inline-block;
+  margin: 0 auto;
+  vertical-align: top;
+}
+
+td {
+  padding:1%;
+}
+
+body {  
+  -webkit-transition: background-image 0.3s ease-out;  /* Saf3.2+, Chrome */
+     -moz-transition: background-image 0.3s ease-out;  /* FF4+ */
+      -ms-transition: background-image 0.3s ease-out;  /* IE10 */
+       -o-transition: background-image 0.3s ease-out;  /* Opera 10.5+ */
+          transition: background-image 0.3s ease-out;
+}
+ 

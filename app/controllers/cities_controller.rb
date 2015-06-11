@@ -1,6 +1,13 @@
 class CitiesController < ApplicationController
   def index
     @cities = City.all
+    @cities = City.order('name ASC')
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @cities }
+    end
+
   end
 
   def new
@@ -23,7 +30,7 @@ class CitiesController < ApplicationController
   
   private
     def city_params
-      params[:city].permit(:name)
+      params[:city].permit(:name, :population)
     end
 
 end

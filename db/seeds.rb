@@ -9,17 +9,18 @@
 City.delete_all
 Venue.delete_all
 Event.delete_all
+Trip.delete_all
 
-c1 = City.create!(name: "London")
-c2 = City.create!(name: "Madrid")
-c3 = City.create!(name: "Paris")
-c4 = City.create!(name: "Tokyo")
-c5 = City.create!(name: "Miami")
-c6 = City.create!(name: "New York")
-c7 = City.create!(name: "Barcelona")
-c8 = City.create!(name: "Los Angeles")
-c9 = City.create!(name: "Toronto")
-c10 = City.create!(name: "Berlin")
+c1 = City.create!(name: "London", population:8308000 )
+c2 = City.create!(name: "Madrid", population:3234000)
+c3 = City.create!(name: "Paris", population:2244000)
+c4 = City.create!(name: "Tokyo", population:13350000)
+c5 = City.create!(name: "Miami", population:417650 )
+c6 = City.create!(name: "New York", population:8406000 )
+c7 = City.create!(name: "Barcelona", population:1621000 )
+c8 = City.create!(name: "Los Angeles", population:3884000 )
+c9 = City.create!(name: "Toronto", population:2615000 )
+c10 = City.create!(name: "Berlin", population:3375000)
 
 v1 = Venue.create!(name: "Hammersmith Appollo")
 v2 = Venue.create!(name: "Hyde Park")
@@ -37,3 +38,7 @@ v13 = Venue.create!(name: "Drinking")
 v14 = Venue.create!(name: "Music")
 
 e1 = Event.create!(name: "Glastonbury")
+
+t1 = Trip.create!(from:'10/10/2015', to:'15/10/2015', location: 'London')
+t2 = Trip.create!(from:'1/8/2015', to:'15/8/2015', location: 'Madrid')
+t3 = Trip.create!(from:'10/9/2015', to:'25/9/2015', location: 'Paris')

@@ -1,0 +1,16 @@
+<%= form_for @trip do |form| %>
+  
+
+  <%= form.label 'From'%>
+  <%= date_select :start_date, :startdate %>
+
+  <%= form.label 'To'%>
+  <%= date_select :end_date, :enddate%>
+
+  <%= form.label 'Location' %>
+  <%= form.collection_select :city_id, City.all, :id, :name%>
+
+
+  <%= form.submit 'Submit' %>
+
+  <% end %>
