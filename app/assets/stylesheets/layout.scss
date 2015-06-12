@@ -4,7 +4,7 @@
   width: 100%;
   height: 100px;
   margin: 0 auto;
-  background-color: white;
+  background-color: grey;
 }
 
 li{
@@ -38,5 +38,18 @@ td {
 
 body{
   font-family: 'Dosis';
+
+  -webkit-transition: background-image 0.5s ease-out;  /* Saf3.2+, Chrome */
+     -moz-transition: background-image 0.5s ease-out;  /* FF4+ */
+      -ms-transition: background-image 0.5s ease-out;  /* IE10 */
+       -o-transition: background-image 0.5s ease-out;  /* Opera 10.5+ */
+          transition: background-image 0.5s ease-out;
 }
 
+h2{
+  color: white;
+}
+
+h1{
+  color: white;
+}
