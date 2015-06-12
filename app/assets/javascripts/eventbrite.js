@@ -13,10 +13,16 @@ function apiCall(){
       $('.city-event').empty();
       $('.city-image').empty();
       $.each(data.events, function(index, value) {
-        $('.city-info').append('<tr><td>' + data.events[index].name.html + '</td><td><img src=' + data.events[index].logo.url+'></td></tr>');       
+        console.log(value)
+        $('.city-info').append('<tr><td>' + value.name.text + '</td><td><img src=' + imageOrTobia(value) +'></td><td>' + value.start.local+'</td></tr>');       
       })
     });
 }
+
+function imageOrTobia(value) {
+  return value.logo === null ? 'https://pbs.twimg.com/profile_images/583291736186851328/aDpkMj9M.jpg' : value.logo.url
+}
+
 function searchCities(e){
   console.log("inside search cities function");
 
